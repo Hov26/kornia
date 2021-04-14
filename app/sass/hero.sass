@@ -6,6 +6,7 @@
     justify-content: center
     align-items: center
     background-image: linear-gradient(to right top, #5d4cd5, #0077ef, #0098f8, #00b5f5, #34ceee)
+    position: relative
     .content
         width: 100%
         max-width: 800px
@@ -40,3 +41,24 @@
         border-radius: 25px
     .copy-icon
         margin-right: 8px
+    .hero-scroll-btn
+        width: 50px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        left: 50%
+        bottom: 20px
+        animation: bounce 2s linear infinite
+
+
+
+@keyframes bounce
+    0%
+        transform: translate(-50%, 0)
+    50%
+        transform: translate(-50%, 20px)
+    100%
+        transform: translate(-50%, 0)
+        
