@@ -6,6 +6,7 @@
 @import "partials/footer.sass"
 @import "hero.sass"
 @import "why-kornia.sass"
+@import "news.sass"
 
 body 
     font-family: 'Montserrat', sans-serif
@@ -20,3 +21,20 @@ button
     cursor: pointer
     &:focus
         outline: none
+
+.section-title
+    color: $gray400
+
+.owl-dots
+    display: flex
+    justify-content: center
+
+.owl-dot
+    width: 9px
+    height: 9px
+    border-radius: 50%
+    background: $blue300 !important
+    opacity: 0.4
+    margin: 4px
+    &.active
+        opacity: 1
