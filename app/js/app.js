@@ -1,4 +1,21 @@
+// Show 3 news card onCLick
+document.getElementById('load').onclick = () => {
+    const items = document.getElementsByClassName('hide');
+
+    for (i = 0; i < 6; i++) {
+        if (items[i]) {
+            items[i].classList.remove('hide');
+        }
+    }
+};
+
 $(document).ready(function() {
+
+    $('.hero-scroll-btn').click(function() {
+        $("html, body").animate({ scrollTop: $('.why-kornia').offset().top }, 1000);
+    })
+
+
     $('.hamburger').click(function() {
         $('.nav').addClass('open')
         $('.owl-carousel').addClass('off')
@@ -6,22 +23,6 @@ $(document).ready(function() {
     $('.close-btn').click(function() {
         $('.nav').removeClass('open')
     })
-
-    var cards = $('.news-card.hide')
-
-    $('.load-more-btn').click(function() {
-        // console.log("$('.news-container').find('news-card.hide')", $('.news-container').find('news-card.hide'))
-        // $('.news-container').find('.news-card').removeClass('hide')
-
-        console.log("$('.news-container').find('.news-card')", cards.length)
-        cards.each(function(idx) {
-            if (cards.hasClass('hide')) {
-                console.log('idx', idx)
-                $(this).addClass('ssssss')
-            }
-        })
-    })
-
 
     // var newsSlider = $('.owl-carousel');
 
