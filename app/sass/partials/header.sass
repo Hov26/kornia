@@ -13,7 +13,8 @@
         width: 140px
     .header-logo
         width: 100%
-    .nav
+    .close-btn
+        display: none
     .ul
         display: flex
         align-items: center
@@ -21,6 +22,10 @@
         padding: 0 15px
         font-weight: 600
         color: $gray200
+        transition: all 0.1s linear
+        &:not(.github-btn)
+            &:hover 
+                opacity: 0.5
     .github-btn
         height: 36px
         padding: 0 12px
@@ -31,6 +36,64 @@
         color: $blue300
         font-weight: 600
         margin-left: 15px
+        transition: all 0.2s linear
+        .white-git
+            display: none
+        &:hover 
+            background: $blue300
+            color: $white
+            .blue-git
+                display: none
+            .white-git
+                display: block
     .header-github-logo
         padding-right: 9px
+    .hamburger
+        display: none
+        .line
+            width: 25px
+            height: 3px
+            border-radius: 2px
+            background: $gray400
+            &:not(:first-child)
+                margin-top: 5px
+
+
+@media only screen and ( max-width: 800px )
+    .header
+        .hamburger
+            display: block
+        .nav
+            width: 100%
+            height: 100%
+            background: $white
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            display: none
+            &.open
+                display: flex
+                justify-content: center
+                align-items: center
+        .ul
+            flex-direction: column
+        
+        .nav-link
+            &:not(.github-btn)    
+                padding: 4vw 0
+                font-size: 28px
+                display: block
+        .github-btn
+            margin-left: 0
+            margin-top: 30px
+        .close-btn
+            display: block
+            position: absolute
+            z-index: 1
+            top: 10px
+            right: 4px
+            width: 50px
+
     

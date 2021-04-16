@@ -1,0 +1,61 @@
+@import "../colors.sass"
+
+.footer
+    padding: 65px 0 30px 0
+    background-image: linear-gradient(to right top, #5d4cd5, #0077ef, #0098f8, #00b5f5, #34ceee)
+    .container
+        max-width: 1440px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+    .footer-logo
+        width: 37px
+        height: 43px
+        display: block
+    .form
+        position: relative
+        height: 50px
+        width: 40%
+        max-width: 372px
+    .email-input
+        height: 50px
+        padding: 15px 50px 15px 20px
+        background: rgba(255, 255, 255, 0.5)
+        border: none
+        width: 100%
+        color: $white
+        font-size: 16px
+        &:focus
+            outline: none
+        &::placeholder 
+            color: $white
+    .submit-btn
+        width: 50px
+        height: 50px
+        position: absolute
+        top: 0
+        right: 0
+        background-color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+    .copyright
+        text-align: center
+        color: $white
+        display: block
+        margin-top: 60px
+    .footer-li
+        & + .footer-li
+            margin-top: 15px
+    .footer-link
+        font-weight: 600
+    .social-ul
+        display: flex
+    .social-li
+        margin: 0 8px
+    .social-link
+        width: 50px
+        height: 50px
+        background: $white
+        border-radius: 50%
+        display: block

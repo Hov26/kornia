@@ -16,10 +16,13 @@
 <body>
 
     <!-- <script src="js/app.min.js"></script> -->
-    <header class="header hide">
+    <header class="header">
         <menu class="container header-container">
             <a href="#" class="header-logo-link"><img src="images/dest/logo.svg" alt="Kornya logo" class="header-logo"></a>
             <nav class="nav">
+                <button class="close-btn">
+                    <img src="images/dest/close-icon.svg" alt="CLose icon" class="close-icon">
+                </button>
                 <ul class="ul">
                     <li>
                         <a href="#" class="nav-link">Documentation</a>
@@ -34,10 +37,18 @@
                         <a href="#" class="nav-link">Blog</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link github-btn"><img src="images/dest/github.svg" alt="Github logo" class="header-github-logo">Github</a>
+                        <a href="#" class="nav-link github-btn">
+                            <img src="images/dest/github.svg" alt="Github logo" class="header-github-logo blue-git">
+                            <img src="images/dest/github-white.svg" alt="Github logo" class="header-github-logo white-git"> Github
+                        </a>
                     </li>
                 </ul>
             </nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </menu>
     </header>
     <section class="hero hide">
@@ -152,8 +163,7 @@
             </div>
         </div>
     </section>
-
-    <section class="ecosystem">
+    <section class="ecosystem hide">
         <div class="container">
             <div class="title-wrapper">
                 <h4 class="section-title fz32">Ecosystem</h4>
@@ -211,12 +221,58 @@
             </div>
         </div>
     </section>
+    <footer class="footer hide">
+        <div class="container">
+            <img src="images/src/logo-mini.svg" class="footer-logo" aria-label="Kornya logo"></img>
+            <form action="" class="form">
+                <input type="email" class="email-input" placeholder="Email">
+                <button type="submit" class="submit-btn"><img src="images/dest/send-form.svg" alt="Send icon"></button>
+            </form>
+            <ul class="footer-ul">
+                <li class="footer-li">
+                    <a href="#" class="footer-link fz14 white">Documentation</a>
+                </li>
+                <li class="footer-li">
+                    <a href="#" class="footer-link fz14 white">Tutorials</a>
+                </li>
+                <li class="footer-li">
+                    <a href="#" class="footer-link fz14 white">Community</a>
+                </li>
+                <li class="footer-li">
+                    <a href="#" class="footer-link fz14 white">Blog</a>
+                </li>
+                <li class="footer-li">
+                    <a href="#" class="footer-link fz14 white">Github</a>
+                </li>
+            </ul>
+            <div class="footer-socials">
+                <ul class="social-ul">
+                    <li class="social-li">
+                        <a href="#" class="social-link slack"></a>
+                    </li>
+                    <li class="social-li">
+                        <a href="#" class="social-link twitter"></a>
+                    </li>
+                    <li class="social-li">
+                        <a href="#" class="social-link github"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <small class="copyright fz18">Copyright © 2021 Kornia. All Rights Reserved.</small>
+    </footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.min.js"></script>
 
     <script>
         $(document).ready(function() {
+            $('.hamburger').click(function() {
+                $('.nav').addClass('open')
+            })
+            $('.close-btn').click(function() {
+                $('.nav').removeClass('open')
+            })
             var newsSlider = $('.owl-carousel');
 
             newsSlider.owlCarousel({
