@@ -1,7 +1,7 @@
 @import "colors.sass"
 
 .news
-    padding: 60px 0 90px 0
+    padding: 60px 0 160px 0
     .title-wrapper
         position: relative
         width: 100%
@@ -20,12 +20,13 @@
         width: 100%
         max-width: 300px
         height: 8px
-    .new-container
+    .news-container
         display: flex
         justify-content: center
         flex-wrap: wrap
         max-width: 1100px
         margin: 0 auto
+        position: relative
     .news-card
         width: 30%
         flex-grow: 1
@@ -35,13 +36,15 @@
         max-width: 335px
         padding: 20px
         border-radius: 10px
-        display: flex
+        display: none
         flex-direction: column
+        display: flex
+        &.show 
     .news-date
         color: $gray200
         margin: 32px 0 37px 0
-    .read-more-btn
-        align-self: center
+    .btn
+        font-weight: 500
         width: 100%
         max-width: 150px
         padding: 0 10px
@@ -50,9 +53,37 @@
         justify-content: center
         align-items: center
         border-radius: 7px
+        transition: all 0.1s linear
+    .read-more-btn
+        align-self: center
         border: 2px solid $blue300
         color: $blue300
-        font-weight: 500
+        .white-arrow
+            display: none
+        &:hover 
+            color: $white
+            background: $blue300
+            border-color: $blue300
+            .white-arrow
+                display: block
+            .blue-arrow
+                display: none    
         img 
             padding-left: 8px
             max-width: 20px
+        
+    .load-more-btn
+        background: $blue300
+        color: $white
+        position: absolute
+        bottom: -100px
+        border: 2px solid transparent
+        &:hover 
+            background: $white
+            color: $blue300
+            border-color: $blue300
+
+@media only screen and ( max-width: 800px )
+    .news
+        .news-card
+            width: 100%
