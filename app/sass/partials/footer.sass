@@ -56,9 +56,23 @@
     .social-link
         width: 50px
         height: 50px
-        background: $white
+        background: rgba(255, 255, 255, 0.5)
         border-radius: 50%
         display: block
+        background-image: url('../images/dest/footer-sprite.png')
+
+        &.twitter
+            background-position: -15px -15px
+            &:hover
+                background-position: -15px -95px
+        &.slack
+            background-position: -20px -358px
+            &:hover
+                background-position: -20px -447px
+        &.github
+            background-position: -20px -180px
+            &:hover
+                background-position: -20px -269px
 
 @media only screen and ( max-width: 800px )
     .footer

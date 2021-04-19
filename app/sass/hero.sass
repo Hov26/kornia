@@ -39,6 +39,9 @@
         color: $blue300
         background: $white
         border-radius: 25px
+        transition: all 0.1s linear
+        &:hover 
+            opacity: .8
     .copy-icon
         margin-right: 8px
     .hero-scroll-btn
@@ -52,6 +55,45 @@
         bottom: 20px
         animation: bounce 2s linear infinite
 
+.bounce
+    position: absolute
+    z-index: 1
+
+.bounce-1-wrapper
+    width: 200px
+    height: 155px
+    top: 160px
+    left: -50px
+    animation: scale 3s linear infinite
+
+.bounce-2
+    top: 70px
+    left: 260px
+    animation: scale 3.5s linear infinite
+.bounce-3
+    left: 20%
+    bottom: 50px
+    animation: scale 4s linear infinite
+.bounce-4
+    bottom: 116px
+    right: 280px
+    animation: scale 4.4s linear infinite
+.bounce-5-wrapper
+    top: 33px
+    right: -60px
+
+.bounce-5
+    top: -11px
+    right: -10px
+    z-index: 2
+    width: 180px
+    animation: scale 4.8s linear infinite
+.bounce-6
+    top: 0
+    right: 0
+    animation: scale 4s linear infinite
+
+
 
 
 @keyframes bounce
@@ -61,6 +103,14 @@
         transform: translate(-50%, 20px)
     100%
         transform: translate(-50%, 0)
+
+@keyframes scale
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(1.3)
+    100%
+        transform: scale(1)
         
 
 @media only screen and ( max-width: 800px )
