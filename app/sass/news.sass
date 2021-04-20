@@ -43,17 +43,6 @@
     .news-date
         color: $gray200
         margin: 32px 0 37px 0
-    .btn
-        font-weight: 500
-        width: 100%
-        max-width: 150px
-        padding: 0 10px
-        height: 40px
-        display: inline-flex
-        justify-content: center
-        align-items: center
-        border-radius: 7px
-        transition: all 0.1s linear
     .read-more-btn
         align-self: center
         border: 2px solid $blue300
@@ -72,18 +61,32 @@
         img 
             padding-left: 8px
             max-width: 20px
-        
     .load-more-btn
-        background: $blue300
-        color: $white
-        position: absolute
         bottom: -100px
-        border: 2px solid transparent
-        font-weight: 600
-        &:hover 
-            background: $white
-            color: $blue300
-            border-color: $blue300
+
+.btn
+    font-weight: 500
+    width: 100%
+    max-width: 150px
+    padding: 0 10px
+    height: 40px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    border-radius: 7px
+    transition: all 0.1s linear
+        
+.load-more-btn
+    background: $blue300
+    color: $white
+    position: absolute
+    
+    border: 2px solid transparent
+    font-weight: 600
+    &:hover 
+        background: $white
+        color: $blue300
+        border-color: $blue300
 
 @media only screen and ( max-width: 800px )
     .news

@@ -54,6 +54,10 @@
         left: 50%
         bottom: 20px
         animation: bounce 2s linear infinite
+    .hidden-input
+        position: absolute
+        top: -9999em
+        left: -9999em
 
 .bounce
     position: absolute
@@ -64,20 +68,39 @@
     height: 155px
     top: 160px
     left: -50px
-    animation: scale 3s linear infinite
+    @media only screen and ( max-width: 1024px )
+        display: none
+
+.lines
+    position: absolute
+    right: 0
+    top: 60px
+    animation: scale 5s linear infinite
+
+.bounce-1
+    animation: scale 4s linear infinite
 
 .bounce-2
     top: 70px
     left: 260px
     animation: scale 3.5s linear infinite
+    @media only screen and ( max-width: 1024px )
+        display: none
 .bounce-3
     left: 20%
     bottom: 50px
     animation: scale 4s linear infinite
+    @media only screen and ( max-width: 1024px )
+        left: initial
+        right: 40px
+        width: 60px
 .bounce-4
     bottom: 116px
     right: 280px
     animation: scale 4.4s linear infinite
+    @media only screen and ( max-width: 1024px )
+        right: initial
+        left: -30px
 .bounce-5-wrapper
     top: 33px
     right: -60px
@@ -88,10 +111,17 @@
     z-index: 2
     width: 180px
     animation: scale 4.8s linear infinite
+    @media only screen and ( max-width: 1024px )
+        width: 80px
+        right: 54px
+        top: 10px
 .bounce-6
     top: 0
     right: 0
     animation: scale 4s linear infinite
+    @media only screen and ( max-width: 1024px )
+        right: 40px
+        width: 100px
 
 
 

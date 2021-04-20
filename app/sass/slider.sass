@@ -1,0 +1,68 @@
+@import "colors.sass"
+
+.slider
+    padding: 60px 0
+    background: $blue100
+    .slider-item-wrapper
+        padding: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+    .slider-item
+        margin: 30px auto
+        width: 100%
+        max-width: 924px
+        width: 100%
+        border-radius: 10px
+        background: $white
+        padding: 50px
+        display: flex
+        justify-content: space-between
+        box-shadow: 0px 3px 6px #0047CE29
+        position: relative
+    .left-side
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    .slide-title
+        font-size: 32px
+        color: $gray400
+        font-weight: 600
+        margin-bottom: 20px
+    .left-side
+        width: 30%
+        max-width: 250px
+        margin-right: 30px
+    .code
+        width: 50%
+        flex-grow: 1
+        max-width: 490px
+    .code-img
+        width: 100%
+    .owl-carousel .owl-item img.slider-logo
+        position: absolute
+        bottom: 20px
+        right: 50px
+        width: 60px
+
+@media only screen and ( max-width: 1024px )
+    .slider
+        padding: 30px 0 
+        .slider-item
+            max-width: 95%  
+            text-align: center
+            padding: 30px 30px 44px 30px
+            margin: 10px auto
+        .slide-title
+            font-size: 22px
+        .code
+            display: none
+        .left-side
+            width: 100%
+            max-width: initial
+            margin-right: 0
+        .slider-item-wrapper
+            padding: 30px
+        .owl-carousel .owl-item img.slider-logo
+            right: 30px
+    
