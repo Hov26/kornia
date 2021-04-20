@@ -1,16 +1,16 @@
-function myFunction() {
-    var copyText = document.getElementById("myInput");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-}
+// function myFunction() {
+//     var copyText = document.getElementById("myInput");
+//     copyText.select();
+//     copyText.setSelectionRange(0, 99999);
+//     document.execCommand("copy");
+// }
 
 $(document).ready(function() {
 
     // copy hero button text
-    $('.hero-btn').click(function() {
-        myFunction()
-    })
+    // $('.hero-btn').click(function() {
+    //     myFunction()
+    // })
 
     // Hide ecosystem section cards on mobile
     var windowWidth = $(window).width();
